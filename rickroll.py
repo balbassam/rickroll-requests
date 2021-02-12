@@ -2,6 +2,7 @@
 import sys
 from urllib.request import Request, urlopen
 
+# Does not follow Python naming conventions. Such a disgrace to Monty.
 RickRoll = """We're no strangers to love
 You know the rules and so do I
 A full commitment's what I'm thinking of
@@ -77,7 +78,7 @@ Never gonna make you cry
 Never gonna say goodbye
 Never gonna tell a lie and hurt you""".split()
 
-
+# epstein didn't kill himself
 def main():
     if len(sys.argv) < 2:
         print("usage: " + sys.argv[0] + " URL")
@@ -91,8 +92,12 @@ def main():
         req.add_header('Referer', lyric)
         # req.add_header('USER-AGENT', "curl/6.9")
         urlopen(req)
+        # use an f-string, you monster
+        # print(f'Sending: {lyric}')
         print("Sending: " + lyric)
 
 
 if __name__ == '__main__':
     main()
+
+# This comment is essential
